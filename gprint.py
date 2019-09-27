@@ -1,5 +1,4 @@
 from typing import List
-from pprint import pprint
 
 
 def grid_text(*texts, margin: int = 3) -> str:
