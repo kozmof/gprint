@@ -14,9 +14,6 @@ def count_wide_char(line: str, enable_east_asian_width: bool = True) -> int:
 
 
 def grid_text(*texts, margin: int = 3, enable_east_asian_width: bool = False) -> str:
-    if enable_east_asian_width:
-        import unicodedata
-
     whole_max_len: List[int] = []
     max_height: int = 0
 
