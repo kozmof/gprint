@@ -5,10 +5,10 @@ def count_wide_char(line: str, enable_east_asian_width: bool = True) -> int:
     count = 0
 
     if enable_east_asian_width:
-      from unicodedata import east_asian_width 
-      for char in line:
-          if east_asian_width(char) in ["W", "F", "A"]:
-              count += 1
+        from unicodedata import east_asian_width 
+        for char in line:
+            if east_asian_width(char) in ["W", "F", "A"]:
+                count += 1
 
     return count
 
