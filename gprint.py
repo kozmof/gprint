@@ -12,8 +12,10 @@ def count_wide_char(line: str, enable_east_asian_width: bool = True) -> int:
 
     return count
 
+TR_ST = "\033[?7l"
+TR_ED = "\033[?7h"
 
-def grid_text(*texts, margin: int = 3, enable_east_asian_width: bool = False) -> str:
+def grid_text(*texts, margin: int = 3, enable_east_asian_width: bool = False, enable_auto_truncate: bool = True) -> str:
     whole_max_len: List[int] = []
     max_height: int = 0
 
@@ -49,7 +51,11 @@ def grid_text(*texts, margin: int = 3, enable_east_asian_width: bool = False) ->
                 else:
                     result_lines[rest_line_pos] += " " * whole_max_len[col_pos] + " " * margin
 
-    result = "\n".join(result_lines)
+    if enable_auto_truncate:
+        result = "\n".join([f"{TR_ST}{result_line}{TR_ED}" for result_line in result_lines])
+    else:
+        result = "\n".join(result_lines)
+
     return result
 
 
