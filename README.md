@@ -1,5 +1,5 @@
 ## gprint
-![badge](https://img.shields.io/badge/Python-3.6-brightgreen?style=flat-square) ![badge](https://img.shields.io/badge/version-1.1.0-blue?style=flat-square)
+![badge](https://img.shields.io/badge/Python-3.6-brightgreen?style=flat-square) ![badge](https://img.shields.io/badge/version-1.2.0-blue?style=flat-square)
 
 gprint -> grid print
 
@@ -18,4 +18,5 @@ f     !!!!!!               3
                            4
                            5
 ```
-When you use Kanji, Hiragana or Katakana, pass `True` to `enable_east_asian_width` (See a demo.py).
+- When you use Kanji, Hiragana or Katakana, pass `True` to `enable_east_asian_width` (See a demo.py).
+- `enable_auto_truncate` is `True` as a default
