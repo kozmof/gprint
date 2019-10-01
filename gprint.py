@@ -59,6 +59,6 @@ def grid_text(*texts, margin: int = 3, enable_east_asian_width: bool = False, en
     return result
 
 
-def gprint(*texts, margin: int = 3, enable_east_asian_width: bool = False) -> None:
+def gprint(*texts, margin: int = 3, enable_east_asian_width: bool = False, enable_auto_truncate: bool = True) -> None:
     result = grid_text(*texts, margin=margin, enable_east_asian_width=enable_east_asian_width)
     print(result)
